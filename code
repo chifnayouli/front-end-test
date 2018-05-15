@@ -46,11 +46,19 @@ function myFunction1(){
 	document.getElementById("demo1").innerHTML="我的第一个JavaScript函数";
 }
 
+//点击之后输出指定对象
 function car(){
   var carname="Volvo";
   document.getElementById("cardemo").innerHTML=carname;
 }
 
+//弹出对话框，根据输入的内容
+function myFunction2(name,job){
+  alert("Welcome " + name + ", the " + job);
+
+}
+
+//弹出警示对话框
 window.alert("Kathy I love you.");
 </script>
 </head>
@@ -83,6 +91,9 @@ window.alert("Kathy I love you.");
 <button type="button" onclick="displayDate()">显示日期</button>
 <button type="button" onclick="alert('欢迎')">点我</button>
 <button type="button" onclick="myFunction()">右键点击</button>
+
+<p>点击这个按钮，来调用带参数的函数</p>
+<button type="button" onclick="myFunction2('Payne','Developer')">点击这里</button>
 
 
 
