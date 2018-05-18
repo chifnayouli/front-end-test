@@ -63,6 +63,89 @@ function displayDate1(){
 
 }
 
+function myFunction3(){
+	var x="";
+	var time=new Date().getHours();
+	if (time<20){
+		x="Good Day";
+	}
+	document.getElementById("wenhou").innerHTML=x;
+};
+
+function myFunction4(){
+	var x="";
+	var time=new Date().getHours();
+	if (time>23){
+	x="Good Night.";
+	}
+	else {
+		x="Good day.";
+	}
+	document.getElementById("wanan").innerHTML=x;
+};
+
+
+
+/*function zhouJi()
+{
+	var x;
+	var d=new Date().getDay();
+	switch(d)
+	{
+		case 1:x="周一"；
+		break;
+		case 2:x="周二";
+		break;
+		case 3:x="周三";
+		break;
+		case 4:x="周四";
+		break;
+		case 5:x="周五"；
+		break;
+		case 6:x="周六"
+			break;
+	}
+	document.getElementById("zhouwu").innerHTML=x;
+}*/
+function car(){
+	var cars=["BMW","VW","Volvo","Honda"]
+	for (var i=0; i<cars.length;i++) {
+		document.getElementById("car").innerHTML=cars;
+}
+
+};
+
+function functions(){
+	var x="";
+	for (var i=0;i<5;i++){
+		x=x + "该数字为 "+ i +"<br>";
+	}
+	document.getElementById("loop").innerHTML=x;
+}
+
+
+function abc(){
+	var x="",i=0;
+	while (i<5){
+		x=x + "该数字为 " + i + "<br>";
+		i++;
+	}
+	document.getElementById("while").innerHTML=x;
+}
+
+function do(){
+	var x="",i=0;
+	do{
+		x=x+"该数字为"+i+"<br>";
+		i++;
+	}
+	while(i<5)
+	document.getElementsById("abcd").innerHTML=x;
+};
+
+
+
+
 //弹出警示对话框
 window.alert("Kathy I love you.");
 </script>
@@ -107,9 +190,39 @@ window.alert("Kathy I love you.");
 <br>
 
 <p>点击按钮执行<em>displayDate()</em>函数</p>
-<button onclick="displayDate1()">点击这里</p>
+<button onclick="displayDate1()">点击这里</button>
 <p id="demoo"></p>
+<br>
+<br>
+<p>如果时间早于20:00，会获得问候“Good Day.”</p>
+<button onclick="myFunction3()">点击这里</button>
+<p id="wenhou"></p>
+<br>
+<br>
+<p>如果时间晚于23:00，会获得问候“Good Night.”</p>
+<button onclick="myFunction4()">点击这里</button>
+<p id="wanan"></p>
+<br>
+<br>
 
+<p>车</p>
+<button onclick="car()">请点击</button>
+<p id="car"></p>
+<br>
+<br>
+<p>点击按钮循环代码5次</p>
+<button onclick="functions()">请点击</button>
+<p id="loop"></p>
+<br>
+<br>
+<p>点击按钮while循环</p>
+<button onclick="abc()">请点击</button>
+	<p id="while"></p>
+<br>
+<br>
+<p>点击按钮Do循环</p>
+<button onclick="do()">请点击</button>
+<p id="abcd"></p>
 
 </body>
 
