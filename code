@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <title>My First JavaScript</title>
 <script>
+"use strict";
 function displayDate(){
 	document.getElementById("demo").innerHTML=Date();
 }
@@ -133,6 +134,7 @@ function abc(){
 	document.getElementById("while").innerHTML=x;
 }
 
+/*
 function do(){
 	var x="",i=0;
 	do{
@@ -142,6 +144,93 @@ function do(){
 	while(i<5)
 	document.getElementsById("abcd").innerHTML=x;
 };
+*/
+
+
+
+function myFunction5() {
+    var str = "Visit Runoob!";
+    var n = str.search(/Runoob/i);
+    document.getElementById("regex").innerHTML = n;
+}
+
+
+
+function myFunction6(){
+		var str = document.getElementById("replace").innerHTML;
+		var txt = str.replace(/microsoft/i,"Runood");
+		document.getElementById("replace").innerHTML=txt;
+}
+
+function myFunction7(){
+		var str = document.getElementById("replace1").innerHTML;
+		var txt = str.replace(/apple/i,"Google");
+		document.getElementById("replace1").innerHTML=txt;
+}
+
+function myFunction8(){
+		var str = "Hello world.";
+		var n = str.search(/d/i);
+		document.getElementById("regex1").innerHTML=n;
+}
+
+var patt1=new RegExp("e");
+document.write(patt1.test("The best things in life are free"));
+
+
+
+var txt="";
+function message(){
+		try {
+				addddlert("Welcome guest!");
+		}
+		catch(err){
+				txt="本页有一个错误。\n\n";
+				txt+="错误描述： " + err.message + "\n\n";
+				txt+="点击确定继续。\n\n";
+				alert(txt);
+		}
+}
+
+/*
+function myFunction9(){
+		var message,x;
+		message = document.getElementById("message1");
+		message.innerHTML="";
+		x = document.getElementById("input").value;
+		try {
+				if (x == "") throw "值为空"；
+				if（isNan(x) throw "不是数字"；
+				x = Number(x);
+				if (x < 5)   throw "太小";
+				if (x > 10)  throw "太大"；
+		}
+		catch(err) {
+				message.innerHTML= "错误: " + err;
+		}
+}
+*/
+
+function myFunction9() {
+    var message, x;
+    message = document.getElementById("message1");
+    message.innerHTML = "";
+    x = document.getElementById("abcde").value;
+    try {
+        if(x == "")  throw "值为空";
+        if(isNaN(x)) throw "不是数字";
+        x = Number(x);
+        if(x < 5)    throw "太小";
+        if(x > 10)   throw "太大";
+    }
+    catch(err) {
+        message.innerHTML = "错误: " + err;
+    }
+}
+
+
+
+
 
 
 
@@ -223,6 +312,40 @@ window.alert("Kathy I love you.");
 <p>点击按钮Do循环</p>
 <button onclick="do()">请点击</button>
 <p id="abcd"></p>
+
+
+<br>
+<p>搜索字符串“runoob”，并显示匹配的起始位置：</p>
+<button onclick="myFunction5()">点我</button>
+<p id="regex"></p>
+
+<br>
+<p>替换Microsoft为Runood:</p>
+<button onclick="myFunction6()">点我</button>
+<p id="replace">请访问microsoft</p>
+
+
+<br>
+<p>替换Apple为Google</p>
+<button onclick="myFunction7()">请点我</button>
+<p id="replace1">我支持Apple</p>
+
+<br>
+<p>查找方括号之间的l字符</p>
+<button onclick="myFunction8()">点我</button>
+<p id="regex1"></p>
+
+<br>
+<input type="button" value = "查看消息" onclick="message()"/>
+
+
+<br>
+<p>输入一个5到10之间的数字</p>
+<input id="abcde" type="text"/>
+<button type="button" onclick="myFunction9()">测试输入</button>
+<p id="message1"></p>
+
+
 
 </body>
 
