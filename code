@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <title>My First JavaScript</title>
 <script>
-"use strict";
+
 function displayDate(){
 	document.getElementById("demo").innerHTML=Date();
 }
@@ -229,6 +229,14 @@ function myFunction9() {
 }
 
 
+function validateForm(){
+		var x = document.forms["myForm"]["fname"].value;
+		if (x ==null || x ==""){
+				alert("需要输入名字。");
+				return false;
+		}
+}
+
 
 
 
@@ -344,7 +352,11 @@ window.alert("Kathy I love you.");
 <input id="abcde" type="text"/>
 <button type="button" onclick="myFunction9()">测试输入</button>
 <p id="message1"></p>
-
+<br>
+<br>
+<form name = "myForm" action = "demo_form.php" onsubmit = "return validateForm()" method = "post">
+	名字：<input type = "text" name = "fname">
+	<input type="submit" value = "提交">
 
 
 </body>
