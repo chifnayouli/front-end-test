@@ -237,7 +237,10 @@ function validateForm(){
 		}
 }
 
-
+//window.onload = function() {
+	var myform = document.getElementByName("myform")[0];
+	alert(myform.name);
+}
 
 
 
@@ -354,9 +357,38 @@ window.alert("Kathy I love you.");
 <p id="message1"></p>
 <br>
 <br>
-<form name = "myForm" action = "demo_form.php" onsubmit = "return validateForm()" method = "post">
-	名字：<input type = "text" name = "fname">
-	<input type="submit" value = "提交">
+
+
+
+<form name = "myform1" id = "form1" action = "" method = "post">
+	姓名:<input type = "text" name = "names"><br/>
+	年龄：<input type = "radio" name = "age" value = "xiao"> Under 18 <input type = "radio" name = "age" value = "da">Over 18<br/>
+	性别:<input type = "radio" name = "sex" value = "man">男 <input type = "radio" name = "sex" value = "woman">女<br/>
+	爱好:<input type = "checkbox" name = "hobbit" value = "play">玩
+			 <input type = "checkbox" name = "hobbit" value = "run">跑
+			 <input type = "checkbox" name = "hobbit" value = "study">学习
+	毕业院校:
+				<select name = "school">
+					<option>
+						北京大学
+					</option>
+					<option>
+						清华大学
+					</option>
+					<option>
+						南开大学
+					</option>
+				</select>
+				<br/>
+		简介:<textarea cols = "60" rows = "10" name = "info"></textarea>
+
+
+
+
+
+
+
+</form>
 
 
 </body>
